@@ -18,7 +18,7 @@ Add the dependency
 	<dependency>
 	    <groupId>com.github.Rezakeshavarz1376</groupId>
 	    <artifactId>PersianPriceTranslator</artifactId>
-	    <version>Tag</version>
+	    <version>latest-version</version>
 	</dependency>
   
 ### gradle
@@ -36,7 +36,7 @@ Add it in your root build.gradle at the end of repositories
 Add the dependency
 
 	dependencies {
-	        implementation 'com.github.Rezakeshavarz1376:PersianPriceTranslator:Tag'
+	        implementation 'com.github.Rezakeshavarz1376:PersianPriceTranslator:latest-version'
 	}
   
   
@@ -81,6 +81,10 @@ String priceInLetter = persianPriceTranslator.convertNumeralPriceToLetters("1234
 | :---: | :---: | :---: | :---: |
 | FORMAT_LETTER_ONLY | you can use it when you want that output show you with Letter only | 324200 | سیصد و بیست و چهار هزار و دویست تومان |
 | FORMAT_NUMBER_AND_LETTER | you can use it when you want output show you number of price with number and other with letter | 324200 | <div dir="rtl"> 324 هزار و 200 تومان </div> |
+
+## Notes
+ 1. This library supports prices ranging from 1 tooman to 999,999,999,999,999 tooman. 
+ 2. The priceParameter in convertNumeralPriceToLetters function should only contain numbers.
 
 ## Example
 
@@ -134,3 +138,11 @@ String priceLetter = persianPriceTranslator.convertNumeralPriceToLetters("324200
 ```
 #### output
 324 هزار و 200 تومان
+
+## Exceptions
+There are two exceptions in this library
+### PriceOutOfRangeException
+This exception is triggered when the input price parameter exceeds the range of values supported by the library.
+
+### PriceInvalidFormatException
+This exception is triggered when the input price parameter contains invalid characters such as letters, spaces, or other non-numeric symbols, or when the input price parameter begins with a '0'
