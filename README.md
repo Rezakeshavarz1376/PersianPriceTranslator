@@ -1,3 +1,4 @@
+[![](https://jitpack.io/v/Rezakeshavarz1376/PersianPriceTranslator.svg)](https://jitpack.io/#Rezakeshavarz1376/PersianPriceTranslator)
 # PersianPriceTranslator
 This Java library converts Persian numeric Price to Persian letter Price in two formats
 ## Installation
