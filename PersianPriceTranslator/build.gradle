@@ -7,3 +7,14 @@ java {
     sourceCompatibility = JavaVersion.VERSION_1_7
     targetCompatibility = JavaVersion.VERSION_1_7
 }
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            groupId = 'com.rezakeshavarz.PersianPriceTranslator'
+            artifactId = 'com.rezakeshavarz.PersianPriceTranslator'
+            version = '1.0.0'
+
+            from components.java
+        }
+    }
+}
